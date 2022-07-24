@@ -263,7 +263,7 @@ class collection_wrapper {
     ///
     mongocxx::stdx::optional<mongocxx::result::replace_one> replace_one(
         bsoncxx::document::view_or_value filter, const T& replacement,
-        const mongocxx::options::update& options = mongocxx::options::update()) {
+        const mongocxx::options::replace& options = mongocxx::options::replace()) {
         return _coll.replace_one(filter, boson::to_document(replacement), options);
     }
 

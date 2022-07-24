@@ -155,7 +155,7 @@ TEST_CASE(
         if (res) {
             Foo obj_test = res.value();
             REQUIRE(obj_test == obj);
-            int count = coll.count(doc_view);
+            int count = coll.count_documents(doc_view);
             REQUIRE(count == 0);
         }
     }

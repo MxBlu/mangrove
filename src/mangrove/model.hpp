@@ -71,7 +71,7 @@ class model {
     static std::int64_t count(
         bsoncxx::document::view_or_value filter = bsoncxx::document::view_or_value{},
         const mongocxx::options::count& options = mongocxx::options::count()) {
-        return _coll.collection().count(filter, options);
+        return _coll.collection().count_documents(filter, options);
     }
 
     /**
